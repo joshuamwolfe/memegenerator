@@ -1,0 +1,3 @@
+9:45 AM 6/18/2020 - 10:10 AM 6/18/2020
+10:14 AM 6/18/2020 - 11:17 AM 6/18/2020
+(added skeleton files, visuals, attempted to clear input on click and failed attempt at adding picture to page)

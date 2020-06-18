@@ -23,6 +23,10 @@ body {
 	background-color: #f0feff;
 }
 
+.button {
+  float: right;
+}
+/* divider styles */
 hr.rounded {
 	border-top: 2px solid #bbb;
 	border-radius: 5px;
@@ -35,15 +39,16 @@ hr.rounded {
 	width: 90%;
 }
 
+/* form styles */
 form {
-  	width: 50%;
+	width: 50%;
 	margin: 0 auto;
 }
 
 form input {
-  margin: 2px;
+	margin: 2px;
 }
 
 form label {
-  margin: 2px;
+	margin: 2px;
 }
