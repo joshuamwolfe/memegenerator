@@ -1,4 +1,7 @@
 9:45 AM 6/18/2020 - 10:10 AM 6/18/2020
 10:14 AM 6/18/2020 - 11:17 AM 6/18/2020
 (added skeleton files, visuals, attempted to clear input on click and failed attempt at adding picture to page)
+
 11:17 AM 6/18/2020 - 12:05 PM 6/18/2020 added upload picutre button and prevent default on form
+
+1:17 PM 6/18/2020 - 1:21 PM 6/18/2020 (looking for a way to get javascript to display a user submited image)
