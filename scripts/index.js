@@ -1,24 +1,43 @@
-addEventListener('submit', function(e) {
-	e.preventDefault();
-  // let img = new Image();
-  let UIurl = document.getElementById('picurl');
-  let test = UIurl.value; // rename variable
-  console.log(test);
-  let img = document.createElement('img');
-  img.setAttribute('src', test);
-  // append to the document with set attribute using said variable
-  let memeLocation = document.getElementById('location');
-  memeLocation.appendChild(img);
-  // img.onload = function() {
-   
-  //   div.innerHTML += '<img src="'+img.src+'" />'; 
-   
-  // };
-   
-   
-  // img.src = 'image.jpg';
+addEventListener("submit", function(e) {
+  e.preventDefault();
+
+
+  //find the value of the pic url
+  let UIurl = document.getElementById("picurl");
+  let memeToBe = UIurl.value;
+
   
+  let img = document.createElement("img");
+  img.setAttribute('id', 'i')
+  img.setAttribute("src", memeToBe);
+  
+  // append to the document with set attribute using said variable
+  let memeLocation = document.getElementById("location");
+  memeLocation.appendChild(img);
+  
+  //url for pic test
+  //https://www.fillmurray.com/640/360
+
+  //find the value of the text upper
+  let textUpper = document.getElementById('text_top');
+  let textUpperValue = textUpper.value;
+  // img.innerText(textUpperValue);
+  
+  //find the value of the text lower
+  let textLower = document.getElementById('text_lower');
+  let textLowerValue = textLower.value;
+
+
   
 });
 
 
+addEventListener ('click', function (e) {
+  let currentClick = e.target;
+  let img = document.getElementById('i');
+  console.log(currentClick);
+
+  if (currentClick === img) {
+    document.getElementById('i').style.display = 'none';
+  }
+})
