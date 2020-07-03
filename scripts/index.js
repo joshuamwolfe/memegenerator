@@ -1,3 +1,5 @@
+console.log('Currentfile: memegenerator');
+
 addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -5,10 +7,12 @@ addEventListener("submit", function(e) {
   //find the value of the pic url
   let UIurl = document.getElementById("picurl");
   let memeToBe = UIurl.value;
+  let num;
 
+  //looking to classlist
   
   let img = document.createElement("img");
-  img.setAttribute('id', 'i')
+  img.setAttribute('id', num);
   img.setAttribute("src", memeToBe);
   
   // append to the document with set attribute using said variable
@@ -27,6 +31,7 @@ addEventListener("submit", function(e) {
   let textLower = document.getElementById('text_lower');
   let textLowerValue = textLower.value;
 
+  //style image width html element
 
   
 });
@@ -41,3 +46,5 @@ addEventListener ('click', function (e) {
     document.getElementById('i').style.display = 'none';
   }
 })
+
+//how 
