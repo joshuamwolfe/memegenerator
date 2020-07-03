@@ -1,22 +1,30 @@
 console.log('Currentfile: memegenerator');
+let img = document.getElementsByTagName('img');
 
-addEventListener("submit", function(e) {
+addEventListener('submit', function(e) {
   e.preventDefault();
-
-
+  
   //find the value of the pic url
-  let UIurl = document.getElementById("picurl");
-  let memeToBe = UIurl.value;
-  let num;
+  let UIurl = document.getElementById('picurl');
+  let memeToBe = UIurl.value;  
 
   //looking to classlist
   
-  let img = document.createElement("img");
-  img.setAttribute('id', num);
-  img.setAttribute("src", memeToBe);
+  //generate unique ID for picture
+  let generate = function() {
+    let counter = 0;
+    for(let counter of count) {
+     counter++; 
+    }
+    return counter;
+  };
+
+  let img = document.createElement('img');  
+  img.setAttribute('src', memeToBe);
+  img.setAttribute('class', 'meme');
   
   // append to the document with set attribute using said variable
-  let memeLocation = document.getElementById("location");
+  let memeLocation = document.getElementById('location');
   memeLocation.appendChild(img);
   
   //url for pic test
@@ -39,12 +47,19 @@ addEventListener("submit", function(e) {
 
 addEventListener ('click', function (e) {
   let currentClick = e.target;
-  let img = document.getElementById('i');
-  console.log(currentClick);
-
-  if (currentClick === img) {
-    document.getElementById('i').style.display = 'none';
+  console.log(currentClick);       
+  let meme = document.querySelector('.meme'); 
+  let div = document.getElementById('picurl');
+  let img = document.getElementsByTagName('img');
+  if (currentClick = meme){  
+    img.parentNode.removeChild(img);  
   }
 })
 
-//how 
+//delete hint
+//Just like with submitting a new meme, to delete a meme you may need access to the event object. When you click on delete, take a look at what the e.target is. Using JavaScript, can you navigate from the target to the meme, and then remove the meme from the DOM?
+//add text hint
+//You could do this by:
+//1.Add a div around your img and text and give it a position: relative.
+//2.To position text divs, give them each a position: absolute and set their positioning by using the properties of top, right, bottom and left.
+//3.If you need help on positioning, check out our free resources.
