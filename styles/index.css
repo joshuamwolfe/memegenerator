@@ -66,3 +66,24 @@ form input {
 form label {
 	margin: 2px;
 }
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.location {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
