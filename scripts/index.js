@@ -1,39 +1,41 @@
 console.log('Currentfile: memegenerator');
 let img = document.getElementsByTagName('img');
+let form = document.querySelector('form');
 
-addEventListener('submit', function(e) {
-  e.preventDefault();
+form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  let UIurl = document.getElementById('picurl');
-  let memeToBe = UIurl.value;  
+      let meme = document.createElement("div");
+      let top_text = document.createElement("div");
+      let bottom_text = document.createElement("div");
+      let img = document.createElement("img");
+      let btn = document.createElement("button");
 
-  let img = document.createElement('img');  
-  img.setAttribute('src', memeToBe);
-  img.setAttribute('class', 'meme');
-  
-  // append to the document with set attribute using said variable
-  let memeLocation = document.getElementById('location');
-  memeLocation.appendChild(img);
-  
-  //url for pic test
-  //https://www.fillmurray.com/640/360
+      btn.setAttribute("type","button");
 
-  //add text to image
-  //get text values
-  let inputText = document.getElementById('text_top');
-  let textValue = inputText.value;
-  console.log('input value: ' + textValue);
-  
+      img.src = document.getElementById('picurl').value;
+      top_text.classList.add("top_text");
+      top_text.innerHTML = document.getElementById('text_top').value;
+
+      bottom_text.classList.add("bottom_text");
+      bottom_text.innerHTML = document.getElementById('text_lower').value;
+
+      btn.innerHTML = "REMOVE";
+
+      meme.classList.add("meme");
+      meme.appendChild(top_text);
+      meme.appendChild(bottom_text);
+      meme.appendChild(img);
+      meme.appendChild(btn);
+
+      let memeLocation = document.getElementById('location');
+      memeLocation.appendChild(meme);
+
+      document.getElementById('picurl').value = "";
+      document.getElementById('text_top').value = "";
+      document.getElementById('text_lower').value = "";
+
+      btn.addEventListener('click', function(e) {
+          meme.remove();
+      })
 });
-
-
-addEventListener ('click', function (e) {
-  let clickedElement = e.target;
-  console.log(clickedElement);
-
-  let targetCheck = clickedElement.classList.contains("meme");
-
-  if (targetCheck) {
-    clickedElement.remove();
-  }
-})
